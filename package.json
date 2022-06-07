@@ -3,10 +3,7 @@
     "version": "1.0.0",
     "description": "A simple hook that can be used to share state between multiple React components.",
     "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/ScaleupConsulting/useSharedState.git"
-    },
+    "repository": "git://github.com/ScaleupConsulting/useSharedState.git",
     "author": {
         "email": "jayen+npmjs@scaleupconsulting.com.au",
         "name": "Jayen Ashar",
@@ -32,5 +29,8 @@
     ],
     "dependencies": {
         "react": ">=16.8"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/ScaleupConsulting"
     }
 }
