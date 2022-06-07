@@ -8,7 +8,7 @@ It relies on EventTarget, and as such is only currently supported in browsers. T
 
 This package can be installed using,
 
-`npm i @scaleupconsulting/use-shared-state`
+`npm i @scaleup-consulting/use-shared-state`
 
 # Usage
 
@@ -16,7 +16,7 @@ This package can be installed using,
 
 ```js
 //sharedStates.js
-import { SharedStateTarget } from "@scaleupconsulting/use-shared-state";
+import { SharedStateTarget } from "@scaleup-consulting/use-shared-state";
 ...
 
 //declare the state to be shared with an initial value

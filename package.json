@@ -1,5 +1,5 @@
 {
-    "name": "@scaleupconsulting/use-shared-state",
+    "name": "@scaleup-consulting/use-shared-state",
     "version": "1.0.0",
     "description": "A simple hook that can be used to share state between multiple React components.",
     "license": "MIT",
@@ -9,6 +9,13 @@
         "name": "Jayen Ashar",
         "url": "https://github.com/jayenashar"
     },
+    "contributors": [
+        {
+            "email": "canacar.dev@gmail.com",
+            "name": "Can Acar",
+            "url": "https://github.com/ahmetcanacar"
+        }
+    ],
     "types": "./index.js",
     "files": [
         "index.js",
@@ -29,8 +36,5 @@
     ],
     "dependencies": {
         "react": ">=16.8"
-    },
-    "publishConfig": {
-        "registry": "https://npm.pkg.github.com/ScaleupConsulting"
     }
 }
