@@ -4,7 +4,7 @@
 
 `useSharedState` is a simple hook that can be used to share state between multiple React components.
 
-It relies on [`EventTarget`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget), and as such is only currently supported in browsers. There is a line of code to disable it for SSR environments.
+It relies on [EventTarget](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget), and as such is only currently supported in browsers. There is a line of code to disable it for SSR environments.
 
 # Table of Contents
 
@@ -21,6 +21,10 @@ It relies on [`EventTarget`](https://developer.mozilla.org/en-US/docs/Web/API/Ev
 This package can be installed via npm, using :
 
 `npm i @scaleup-consulting/use-shared-state`
+
+Dependencies:
+
+- `react >= v16.8.0`
 
 # Usage
 

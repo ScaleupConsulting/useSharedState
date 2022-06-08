@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 const isSSR = typeof window === "undefined";
 
 const EventTarget = isSSR ? Object : window.EventTarget;
-export default class SharedStateTarget extends EventTarget {
+
+export class SharedStateTarget extends EventTarget {
   constructor(initialStateOfNewComponents) {
     super();
     this.initialStateOfNewComponents = initialStateOfNewComponents;
