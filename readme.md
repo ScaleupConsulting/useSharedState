@@ -1,10 +1,20 @@
 # About this package
-<a href="https://www.npmjs.com/package/@scaleup-consulting/use-shared-state"><img src="https://img.shields.io/npm/v/@scaleup-consulting/use-shared-state" alt="npm-badge"/></a>
 
+<a href="https://www.npmjs.com/package/@scaleup-consulting/use-shared-state"><img src="https://img.shields.io/npm/v/@scaleup-consulting/use-shared-state" alt="npm-badge"/></a>
 
 `useSharedState` is a simple hook that can be used to share state between multiple React components.
 
 It relies on [`EventTarget`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget), and as such is only currently supported in browsers. There is a line of code to disable it for SSR environments.
+
+# Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Creating a shared state](#creating-a-shared-state)
+  - [Manipulating the state](#manipulating-the-state)
+  - [Using the state](#using-the-state)
+- [Best Practices](#best-practices)
+- [Examples](#examples)
 
 # Installation
 
@@ -92,6 +102,10 @@ export function Counter() {
 
 ```
 
-## Examples
+# Best Practices
 
-More examples can be found at [Examples](https://github.com/ScaleupConsulting/useSharedState-examples) repository.
+- To make the Shared State easier to debug, there should be only <span style="color:#FA2D48">one</span> component responsible for setting the state.
+
+# Examples
+
+More examples can be found at [useSharedState-examples](https://github.com/ScaleupConsulting/useSharedState-examples) repository.
