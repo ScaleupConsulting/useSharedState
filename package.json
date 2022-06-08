@@ -1,6 +1,6 @@
 {
     "name": "@scaleup-consulting/use-shared-state",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A simple hook that can be used to share state between multiple React components.",
     "license": "MIT",
     "repository": "git://github.com/ScaleupConsulting/useSharedState.git",

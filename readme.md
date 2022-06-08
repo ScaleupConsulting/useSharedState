@@ -1,12 +1,14 @@
-# About
+# About this package
+<a href="https://www.npmjs.com/package/@scaleup-consulting/use-shared-state"><img src="https://img.shields.io/npm/v/@scaleup-consulting/use-shared-state" alt="npm-badge"/></a>
+
 
 `useSharedState` is a simple hook that can be used to share state between multiple React components.
 
-It relies on EventTarget, and as such is only currently supported in browsers. There is a line of code to disable it for SSR environments.
+It relies on [`EventTarget`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget), and as such is only currently supported in browsers. There is a line of code to disable it for SSR environments.
 
 # Installation
 
-This package can be installed using,
+This package can be installed via npm, using :
 
 `npm i @scaleup-consulting/use-shared-state`
 
@@ -14,12 +16,14 @@ This package can be installed using,
 
 ## Creating a shared state
 
+Creating a shared state hook is no different than creating a simple react hook:
+
 ```js
 //sharedStates.js
 import { SharedStateTarget } from "@scaleup-consulting/use-shared-state";
 ...
 
-//declare the state to be shared with an initial value
+//declare the shared state with an initial value
 export const SHARED_COUNTER = new SharedStateTarget(0);
 
 ...
@@ -27,7 +31,15 @@ export const SHARED_COUNTER = new SharedStateTarget(0);
 
 ## Manipulating the state
 
-```js
+To use and manipulate the shared state function similar to react hook syntax:
+
+```jsx
+const [state, setState] = SHARED_STATE_NAME.useSharedState();
+```
+
+Usage in counter example:
+
+```jsx
 //CounterButtons.jsx
 ...
 import {SHARED_COUNTER} from "./sharedStates"
@@ -53,7 +65,15 @@ export function CounterButtons() {
 
 ## Using the state
 
-```js
+You can also subscribe to state's updates without using the setter function with
+
+```jsx
+const [state] = SHARED_STATE_NAME.useSharedState();
+```
+
+Usage in counter example:
+
+```jsx
 //Counter.jsx
 ...
 import {SHARED_COUNTER} from "./sharedStates"
@@ -61,11 +81,11 @@ import {SHARED_COUNTER} from "./sharedStates"
 ...
 
 export function Counter() {
-//use shared state without setter
-const [count] = SHARED_COUNTER.useSharedState();
+    //use shared state without setter
+    const [count] = SHARED_COUNTER.useSharedState();
 
-//display state
-return <span>{count}</span>;
+    //display state
+    return <span>{count}</span>;
 }
 
 ...
