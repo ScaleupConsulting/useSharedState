@@ -1,6 +1,6 @@
 {
     "name": "@scaleup-consulting/use-shared-state",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "A simple hook that can be used to share state between multiple React components.",
     "license": "MIT",
     "repository": "git://github.com/ScaleupConsulting/useSharedState.git",
@@ -16,9 +16,15 @@
             "url": "https://github.com/ahmetcanacar"
         }
     ],
-    "types": "./index.js",
+    "exports": {
+        "import": "./index.js",
+        "require": "./index.cjs"
+    },
+    "types": "./index.d.ts",
+    "type": "module",
     "files": [
         "index.js",
+        "index.cjs",
         "index.d.ts",
         "index.d.ts.map"
     ],
