@@ -1,6 +1,6 @@
 {
     "name": "@scaleup-consulting/use-shared-state",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "A simple hook that can be used to share state between multiple React components.",
     "license": "MIT",
     "repository": "git://github.com/ScaleupConsulting/useSharedState.git",
@@ -40,7 +40,7 @@
         "eventTarget",
         "sharing"
     ],
-    "dependencies": {
+    "peerDependencies": {
         "react": ">=16.8"
     }
 }
