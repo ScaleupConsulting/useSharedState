@@ -1,14 +1,13 @@
 /**
  * Shared State Target Class
  */
-export class SharedStateTarget {
+export class SharedStateTarget<S> {
   /**
    * Creates a new Shared State Target
-   * @param initialStateOfNewComponents Initial value of the state
+   * @param initialState Initial value of the state
    */
-  constructor(initialStateOfNewComponents: any);
+  constructor(initialState: S);
 
-  initialStateOfNewComponents: any;
   /**
    * @description Subscribes to shared state hook
    * @example
@@ -18,6 +17,26 @@ export class SharedStateTarget {
    * For detailed examples
    * @see https://github.com/ScaleupConsulting/useSharedState-examples
    */
-  useSharedState(): [any, (detail: any) => any];
+  useSharedState(): [S, Dispatch<SetStateAction<S>>];
 }
-//# sourceMappingURL=index.d.ts.map
+
+/**
+ * Shared State Target Class
+ */
+ export class SharedStateTarget<S = undefined> {
+  /**
+   * Creates a new Shared State Target
+   */
+  constructor();
+
+  /**
+   * @description Subscribes to shared state hook
+   * @example
+   * ```js
+   *    const [count, setCount] = SHARED_COUNTER.useSharedState();
+   * ```
+   * For detailed examples
+   * @see https://github.com/ScaleupConsulting/useSharedState-examples
+   */
+  useSharedState(): [S | undefined, Dispatch<SetStateAction<S | undefined>>];
+}
