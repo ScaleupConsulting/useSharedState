@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 const isSSR = typeof window === "undefined";
 
@@ -12,7 +12,7 @@ export class SharedStateTarget extends EventTarget {
 
   useSharedState() {
     const [state, setState] = useState(this.initialStateOfNewComponents);
-    const setSharedState = (detail) => super.dispatchEvent(new CustomEvent("set", { detail }));
+    const setSharedState = useCallback( (detail) => super.dispatchEvent(new CustomEvent("set", { detail })),[]);
 
     useEffect(() => {
       const eventListener = ({ detail }) => {
